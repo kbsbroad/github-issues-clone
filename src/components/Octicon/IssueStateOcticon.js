@@ -1,15 +1,14 @@
 import React from 'react'
 import Octicon from './Octicon'
 
-const IssueStateOcticon = ({ state }) => {
-  console.log(state)
+const IssueStateOcticon = ({ state, options = {} }) => {
   const iconName = {
     'OPEN': 'issue-opened',
     'CLOSED': 'issue-closed'
   }
 
   if (iconName) {
-    return <Octicon name={iconName[state]} />
+    return <Octicon name={iconName[state]} options={options}/>
   }
 
   return <span></span>

@@ -1,15 +1,17 @@
 import React from 'react';
 import octicons from 'octicons';
 
-const createOcticonSVG = name => {
+import './styles/Octicon.scss'
+
+const createOcticonSVG = (name, options = {}) => {
   return {
-    __html: octicons[name].toSVG()
+    __html: octicons[name].toSVG(options)
   }
 }
 
-const Octicon = ({ name }) => {
+const Octicon = ({ name, options = {} }) => {
   return (
-    <span dangerouslySetInnerHTML={createOcticonSVG(name)}></span>
+    <span dangerouslySetInnerHTML={createOcticonSVG(name, options)}></span>
   );
 }
 

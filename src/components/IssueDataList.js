@@ -12,7 +12,7 @@ export default graphql(
         variables: {
           owner,
           repo,
-          pageSize: 10
+          pageSize: 20
         }
       }
     }

@@ -1,0 +1,31 @@
+@import '../../../styles/mixins';
+
+.issue-list-header {
+  position: relative;
+  margin-top: 20px;
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 3px 3px 0 0;
+  padding-left: 16px;
+  @include clearfix;
+
+  .btn-link {
+    position: relative;
+    display: inline-block;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-weight: normal;
+    color: #586069;
+    &.selected {
+      color: #24292e;
+      font-weight: 600;
+    }
+    &+.btn-link {
+      margin-left: 10px;
+    }
+
+    .octicon {
+      margin-right: 2px;
+    }
+  }
+}

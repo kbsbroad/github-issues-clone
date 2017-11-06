@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import IssueListHeader from '@/components/IssueListHeader'
 import IssueItem from '@/components/IssueItem'
 
+import './styles/IssueList.scss'
+
 export default class IssueList extends Component {
   constructor(props) {
     super(props);
@@ -32,9 +34,9 @@ export default class IssueList extends Component {
 
     if (openedIssues && openedIssues.length > 0) {
       return (
-        <div className="issue-list-container">
+        <div className="issues-container">
           <IssueListHeader repo={repo} />
-          <ul>
+          <ul className="issue-list">
             {openedIssues.map(edge =>
               <IssueItem
                 key={edge.node.id}

@@ -2,6 +2,6 @@ module.exports = {
   github: {
     // 이 앱을 이용하기 위해서는 github personal private key가 필요.
     // https://github.com/settings/tokens 여기서 새 키를 발급받아서 복사해서 붙여넣기.
-    accessToken: 'c5760fc2db07213c1bf493f2a6914df9d82ffeb8'
+    accessToken: '5cecc0ea842036ac76d9c76973713fe6cb591a94'
   }
 }
