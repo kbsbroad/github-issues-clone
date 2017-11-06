@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 .issue-row {
   list-style-type: none;
   border-top: 1px solid #e1e4e8;
@@ -84,4 +86,5 @@
       }
     }
   }
+  @include clearfix;
 }
