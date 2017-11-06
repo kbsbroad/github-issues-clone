@@ -7,6 +7,10 @@ query (
   $pageSize: Int!
 ){
   repository(owner:$owner, name:$repo) {
+    owner {
+      login
+    }
+    name
     OpenedIssues: issues(
       first:$pageSize,
       states: OPEN,
@@ -28,6 +32,12 @@ query (
           number
           title
           url
+          state
+          author {
+            avatarUrl
+            login
+          }
+          createdAt
           comments {
             totalCount
           }
@@ -35,6 +45,7 @@ query (
             edges {
               node {
                 name
+                color
               }
             }
           }

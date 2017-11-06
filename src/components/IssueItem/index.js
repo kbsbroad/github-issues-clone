@@ -1,2 +1,2 @@
-import IssueItem from './IssueItem'
-export default IssueItem
+import IssueItem from './IssueItem';
+export default IssueItem;

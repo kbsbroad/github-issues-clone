@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import IssueItem from '../IssueItem'
+import IssueListHeader from '@/components/IssueListHeader'
+import IssueItem from '@/components/IssueItem'
 
 export default class IssueList extends Component {
   constructor(props) {
     super(props);
-    this.state = { openedIssues: [] }
+    this.state = {
+      owner: '',
+      repo: '',
+      openedIssues: []
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -14,21 +19,32 @@ export default class IssueList extends Component {
       nextProps.data.repository &&
       nextProps.data.repository.OpenedIssues
     ) {
-      console.log(nextProps.data.repository.OpenedIssues.edges)
-      this.setState({openedIssues: nextProps.data.repository.OpenedIssues.edges})
+      this.setState({
+        owner: nextProps.data.repository.owner.login,
+        repo: nextProps.data.repository,
+        openedIssues: nextProps.data.repository.OpenedIssues.edges
+      })
     }
   }
 
   render() {
-    const { openedIssues } = this.state;
+    const { owner, repo, openedIssues } = this.state;
 
     if (openedIssues && openedIssues.length > 0) {
       return (
-        <ul>
-          {openedIssues.map(edge =>
-            <IssueItem data={edge.node} key={edge.node.id}/>
-          )}
-        </ul>
+        <div className="issue-list-container">
+          <IssueListHeader repo={repo} />
+          <ul>
+            {openedIssues.map(edge =>
+              <IssueItem
+                key={edge.node.id}
+                owner={owner}
+                repo={repo.name}
+                data={edge.node}
+              />
+            )}
+          </ul>
+        </div>
       )
     }
 
