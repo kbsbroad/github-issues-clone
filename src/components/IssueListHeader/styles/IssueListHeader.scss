@@ -1,27 +1,29 @@
+@import '../../../styles/variables';
 @import '../../../styles/mixins';
+@import './variables';
 
 .issue-list-header {
   position: relative;
-  margin-top: 20px;
-  background-color: #f6f8fa;
-  border: 1px solid #e1e4e8;
-  border-radius: 3px 3px 0 0;
-  padding-left: 16px;
+  margin-top: $ilh-margin-top;
+  padding-left: $ilh-padding-left;
+  background-color: $gray-1;
+  border: $border-normal;
+  border-radius: $ilh-border-radius;
   @include clearfix;
 
   .btn-link {
     position: relative;
     display: inline-block;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: $ilh-btn-link-padding;
+    padding-bottom: $ilh-btn-link-padding;
     font-weight: normal;
-    color: #586069;
+    color: $gray-3;
     &.selected {
-      color: #24292e;
-      font-weight: 600;
+      color: $gray-4;
+      font-weight: $font-weight-bold;
     }
     &+.btn-link {
-      margin-left: 10px;
+      margin-left: $ilh-btn-link-margin-left;
     }
 
     .octicon {

@@ -1,6 +1,9 @@
+@import '../../../styles/variables';
+
 .issue-list {
+  /* 첫 번째 열은 list-header와 선이 겹치므로 1px 위로 올려준다. */
   margin-top: -1px;
-  border-left: 1px #e1e4e8 solid;
-  border-right: 1px #e1e4e8 solid;
-  border-bottom: 1px #e1e4e8 solid;
+  border-left: $border-normal;
+  border-right: $border-normal;
+  border-bottom: $border-normal;
 }

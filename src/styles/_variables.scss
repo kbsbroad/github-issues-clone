@@ -1,14 +1,29 @@
-$bg-white: #ffffff !default;
+/* color variables */
+$gray-1: #f6f8fa !default;
+$gray-2: #e1e4e8 !default;
+$gray-3: #586069 !default;
+$gray-4: #24292e !default;
 
-$text-gray-dark:#24292e !default;
-$text-blue: #0366d6 !default;
+$blue-1: #0366d6 !default;
 
+$green-1:#28a745 !default;
+
+$white: #ffffff !default;
+
+/* background colors */
+$bg-white: $white !default;
+
+/* text colors */
+$text-gray-dark: $gray-4 !default;
+$text-blue: $blue-1 !default;
+
+/* font styles */
+$default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$default-font-size: 14px !default;
+$font-weight-bold: 600 !default;
 $lh-default: 1.5 !default;
 
-$font-weight-bold: 600 !default;
-
-$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$body-font-size: 14px !default;
-$body-line-height: $lh-default !default;
-
 $content-width: 980px !default;
+
+/* borders */
+$border-normal: 1px solid $gray-2;

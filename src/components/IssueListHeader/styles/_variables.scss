@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+/* ilh = issue-list-header */
+/* header의 좌상/우상 코너 radius 값 */
+$ilh-border-radius: 3px 3px 0 0;
+/* header의 상단 마진 값 */
+$ilh-margin-top: 20px;
+/* header의 왼쪽 패딩 값 */
+$ilh-padding-left: 16px;
+/* issue 상태 버튼 패딩 값 */
+$ilh-btn-link-padding: 13px;
+/* Closed issue 버튼의 왼쪽 마진 */
+$ilh-btn-link-margin-left: 10px;
